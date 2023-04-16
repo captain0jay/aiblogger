@@ -1,0 +1,99 @@
+//        "https://www.cinemablend.com/feeds.xml",
+ //       "https://movieweb.com/feed/",
+ //       "https://www.comingsoon.net/feed"
+
+
+    //for(let i=0;i<4;i++){
+        //console.log(i)
+        //console.log(url)
+
+while(feed.items[p]!=0){
+        createBlog({ link: feed.items[p].link, title: feed.items[p].title, category: feed.items[p].creator,description: feed.items[p].contentSnippet});
+        p++;
+    }
+
+
+    description = description
+
+
+
+
+
+    .then((response=>{
+        return response.json();
+    }).then((data)=>{
+        const finaldata = data;
+    }))
+    return finaldata;
+
+
+
+    const data = await response.json();
+    if (data.choices.length === 0) {
+        console.log('No message received from the API');
+      } else {
+        const message = data.choices.message;
+        console.log(message);
+      }
+    console.log(data)
+    const finaldata = data;
+    return finaldata;
+
+
+
+    if(flag==true){
+    console.log('runnin rssextractor.....');
+    await rssextractor();
+    flag=false;  
+}
+else{
+    console.log('runnin chatgpt.....');
+    await mainfunc();
+    flag=true;
+}
+jobdoer();
+
+
+const response = await fetch("https://api.openai.com/v1/chat/completions",{
+        method:"POST",
+        headers:{
+           "Content-Type" : 'application/json',
+           "Authorization" : `Bearer ${OPENAI_API_KEY}`
+        },
+        body: JSON.stringify({
+            model:"gpt-3.5-turbo",
+            messages: [{role: 'system' , content: `${promptdata}`}],
+            temperature:0,
+        })
+    }).then(response=>{
+        return response.json();
+    }).then((data)=>{
+        return data;
+    })
+    return response;
+
+
+return new Promise(async (resolve, reject) => {
+    try {
+      // Your logic for calling the ChatGPT API
+      // Example:
+      const response = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer YOUR_API_KEY',
+        },
+        body: JSON.stringify({
+          prompt: prompt,
+          max_tokens: 150,
+          n: 1,
+          stop: null,
+          temperature: 0.7,
+        }),
+      });
+
+      const data = await response.json();
+      resolve(data);
+    } catch (error) {
+      reject(error);
+    }
