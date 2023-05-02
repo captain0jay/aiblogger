@@ -6,7 +6,7 @@ const client = Redis.createClient({port:6380});
 const { getblog } = require('./mongodbsaver');
 const { createrefBlog }  = require('./mongodbsaver');
 const fetch = (...args) => import('node-fetch').then(({default:fetch})=> fetch(...args));
-OPENAI_API_KEY = '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';
+OPENAI_API_KEY = '';
 const schedule = require('node-schedule');
 const { Sema } = require('async-sema');
 

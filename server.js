@@ -9,8 +9,8 @@ const { mainfunc } = require('./rssfeeds/chatgpt.js')
 
 
 
-const CLIENT_ID="aaaae76a77c2c4c59cd8"
-const CLIENT_SECRET="fc0c3a4cc7e1172819a97ad9305fc25e78c5cd5d"
+const CLIENT_ID=""
+const CLIENT_SECRET=""
 const REDIRECT_URL = "http://localhost:3000/"
 //const tokan = typeof window !== 'undefined' ? localStorage.getItem('access_tokenn') : null
 //const upload = multer({dest:'filefold/'});[fa-failed attempt]

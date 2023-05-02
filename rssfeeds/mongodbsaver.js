@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const connectdb = require('./db/connect');
 const blogModel = require('./Models/blog');
 const refblogModel = require('./Models/refblog');
-const uri = "mongodb+srv://captain0jay:Captainjay%4032@cluster0.lqso8t6.mongodb.net/rawblog?retryWrites=true&w=majority";
+const uri = "";
 
 connectdb(uri);
 
